@@ -10,7 +10,7 @@
 	span.page-numbers,
 	a.page-numbers {
 		color: var(--color-black);
-		font-family: var(--font-secondary);
+		font-family: var(--font-primary);
 		font-weight: var(--font-bold);
 		font-size: var(--size-md);
 		text-decoration: none;
@@ -19,10 +19,10 @@
 
 	a.page-numbers:hover {
 		text-decoration: underline;
-		color: var(--color-dark);
+		color: var(--color-bg);
 	}
 
 	span.page-numbers.current {
-		color: var(--color-dark);
+		color: var(--color-bg);
 	}
 }

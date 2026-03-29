@@ -1,11 +1,11 @@
 .section {
-  padding: 2.5rem 0;
+  padding: var(--space-4xl) 0;
 }
 
 .section-top {
-  padding-top: 2.5rem;
+  padding-top: var(--space-4xl);
 }
 
 .section-bottom {
-  padding-bottom: 2.5rem;
+  padding-bottom: var(--space-4xl);
 }

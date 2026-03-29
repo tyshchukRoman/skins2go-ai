@@ -1,10 +1,10 @@
 @mixin box {
-  padding: 2rem;
+  padding: var(--space-xl);
   border-radius: var(--radius-md);
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
 
   @include sm {
-    padding: 1.5rem;
+    padding: var(--space-lg);
   }
 }
 

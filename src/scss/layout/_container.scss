@@ -6,8 +6,8 @@
 
 @mixin container {
   margin-inline: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
   max-width: var(--container-md);
 }
 

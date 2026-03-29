@@ -6,98 +6,89 @@
    * =================================================
    */
 
-  /*
-   * Colors
-   */
-  --color-black: #000000;     /* Just pure black color */
-  --color-white: #FFFFFF;     /* Just pure white color */
+  /* COLORS — Brand */
+  --color-primary: #8f8cff;    /* Main accent — CTAs, borders, highlights */
+  --color-accent: #bf00ff;     /* Decorative gradient accent (purple glow) */
+  --color-orange: #f75e0b;     /* Badge / promo highlights */
 
-  --color-dark: #121212;      /* Usually used for text color (or opposite) */
-  --color-light: #FFF7E9;     /* Usually used for background color (or opposite) */
+  /* COLORS — Backgrounds */
+  --color-bg: #0d0d0d;         /* Page background */
+  --color-surface: #1a1a1a;   /* Cards, panels, elevated surfaces */
+  --color-input: #1e1c2e;      /* Input field background — dark with purple tint */
 
-  --color-primary: #AE8F55;   /* Accent color. Usually button's bg color */
-  --color-secondary: #FFEECE; /* Secondary main color. Sometimes is absent */
+  /* COLORS — Text */
+  --color-text: #ffffff;       /* Primary text */
+  --color-text-muted: #857d97; /* Secondary / muted text */
 
-  --color-success: green;
-  --color-warning: yellow;
-  --color-error: red;
+  /* COLORS — Neutral extremes */
+  --color-black: #000000;
+  --color-white: #ffffff;
 
-
-  /*
-   * Font Sizes
-   */
-  --size-h1: clamp(3.375rem, 6vw, 4.5rem);   /* 54px → 72px */
-  --size-h2: clamp(2.5rem, 4.5vw, 3.375rem); /* 40px → 54px */
-  --size-h3: clamp(2.125rem, 3.5vw, 2.5rem); /* 34px → 40px */
-  --size-h4: clamp(1.375rem, 3vw, 2.125rem); /* 22px → 34px */
-  --size-h5: 1.375rem;                       /* 22px */
-  --size-h6: 1.125rem;                       /* 18px */
-
-  --size-md: 1rem;                           /* 16px */
-  --size-sm: 0.875rem;                       /* 14px */
-  --size-xs: 0.75rem;                        /* 12px */
+  /* COLORS — Feedback */
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-error:   #ef4444;
 
 
-  /*
-   * Font Families
-   */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Inter', sans-serif;
+  /* FONT SIZES */
+  --size-display: clamp(2.5rem, 3.6vw, 3.5rem);    /* 40px → 56px — Gasoek One hero */
+  --size-h1: clamp(2rem, 2.9vw, 2.75rem);           /* 32px → 44px */
+  --size-h2: clamp(1.75rem, 2.5vw, 2.25rem);        /* 28px → 36px */
+  --size-h3: 1.5rem;                                 /* 24px */
+  --size-h4: 1.25rem;                                /* 20px */
+  --size-lg: 1.125rem;                               /* 18px — nav, buttons, subtext */
+  --size-md: 1rem;                                   /* 16px — body default */
+  --size-sm: 0.875rem;                               /* 14px — badges, labels */
+  --size-xs: 0.75rem;                                /* 12px — fine print */
 
 
-  /*
-   * Font Weights
-   */
-  --font-extra-bold: 700;
-  --font-bold: 600;
+  /* FONT FAMILIES */
+  --font-display: 'Gasoek One', sans-serif;    /* Hero/display headlines */
+  --font-primary: 'Space Grotesk', sans-serif; /* All UI text */
+
+
+  /* FONT WEIGHTS */
+  --font-bold:   700;
   --font-medium: 500;
-  --font-regular: 400;
 
 
-  /*
-   * Line Heights
-   */
-  --leading-flat: 1;        /* very compact */
-  --leading-normal: 1.25;   /* default comfortable reading */
-  --leading-relaxed: 1.5;   /* more open, good for body text */
-  --leading-loose: 1.625;   /* airy, headings or large blocks */
+  /* LINE HEIGHTS */
+  --leading-flat:    1;       /* Display / hero text */
+  --leading-tight:   1.2;     /* Headings */
+  --leading-normal:  1.333;   /* Nav / UI (~24/18px ratio) */
+  --leading-relaxed: 1.5;     /* Body copy */
 
 
-  /*
-   * Containers Width
-   */
-  --container-sm: 980px;    /* Used for Content Pages ("Privacy Policy", "Cookie Policy") */
-  --container-md: 1200px;   /* The most common container width */
-  --container-lg: 1300px;   /* Can be used for wider Header or Footer */
+  /* SPACING */
+  --space-xs:  0.375rem;  /*  6px */
+  --space-sm:  0.75rem;   /* 12px */
+  --space-md:  1rem;      /* 16px */
+  --space-lg:  1.5rem;    /* 24px */
+  --space-xl:  2rem;      /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  --space-4xl: 6rem;      /* 96px */
 
 
-  /*
-   * Border Radius
-   */ 
-  --radius-xs: 8px; 
-  --radius-sm: 12px; 
-  --radius-md: 16px; 
-  --radius-lg: 24px; 
-  --radius-xl: 40px; 
+  /* CONTAINERS */
+  --container-sm: 800px;   /* Narrow / text pages */
+  --container-md: 1152px;  /* Main content */
+  --container-lg: 1440px;  /* Full-width header / hero */
 
 
-  /*
-   * Transitions
-   */
+  /* BORDER RADIUS */
+  --radius-xs:   4px;
+  --radius-sm:   12px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-full: 9999px;
+
+
+  /* EFFECTS */
   --transition-base: all 0.3s ease;
-
-
-  /*
-   * Borders
-   */
-  --stroke-base: 1px solid var(--color-black);
-  --stroke-transparent: 1px solid transparent;
-
-
-  /*
-   * Shadows
-   */
-  --shadow-base: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-base:     0 4px 24px rgba(143, 140, 255, 0.15);
+  --stroke-primary:  1px solid var(--color-primary);
+  --stroke-subtle:   1px solid rgba(255, 255, 255, 0.1);
 
 
   /*

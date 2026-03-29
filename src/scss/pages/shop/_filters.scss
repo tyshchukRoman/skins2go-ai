@@ -137,14 +137,14 @@
   height: 2.25rem;
   padding-left: 22px;
   padding-right: 10px;
-  background-color: var(--color-dark-100);
+  background-color: var(--color-surface);
   background-image:  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none"><path d="M10.6904 3.19043C10.8613 3.01958 11.1387 3.01958 11.3096 3.19043C11.4804 3.36128 11.4804 3.63872 11.3096 3.80957L8.11914 7L11.3096 10.1904C11.4804 10.3613 11.4804 10.6387 11.3096 10.8096C11.1387 10.9804 10.8613 10.9804 10.6904 10.8096L7.5 7.61914L4.30957 10.8096C4.13872 10.9804 3.86128 10.9804 3.69043 10.8096C3.51958 10.6387 3.51958 10.3613 3.69043 10.1904L6.88086 7L3.69043 3.80957C3.51958 3.63872 3.51958 3.36128 3.69043 3.19043C3.86128 3.01958 4.13872 3.01958 4.30957 3.19043L7.5 6.38086L10.6904 3.19043Z" fill="%23121212"/></svg>');
   background-repeat: no-repeat;
   background-position-x: 6px;
   background-position-y: 12px;
   background-size: 12px !important;
   border-radius: 4px;
-  border: var(--stroke-base);
+  border: var(--stroke-subtle);
 
   font-size: var(--size-xs);
   font-weight: var(--font-bold);

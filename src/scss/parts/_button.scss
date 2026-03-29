@@ -2,43 +2,40 @@
  * Button
  */
 
-@mixin button {
-  --button-min-width: 4rem;
-  --button-bg: var(--color-primary);
-  --button-text: var(--color-white);
-  --button-x-padding: 1.5rem;
-  --button-y-padding: 1rem;
-  --button-gap: 0.5ch;
-  --focus-color: var(--color-primary);
-  --hover-transition: var(--transition-base);
-
+@mixin button-base {
   display: inline-flex;
-  gap: var(--button-gap);
+  gap: 0.5ch;
   align-items: center;
   justify-content: center;
   line-height: var(--leading-flat);
   position: relative;
-  border-radius: var(--radius-sm);
-  border: var(--stroke-base);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: var(--button-y-padding) var(--button-x-padding);
+  padding: var(--space-sm) var(--space-xl);
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  font-size: var(--size-md);
+  font-family: var(--font-primary);
+  font-size: var(--size-lg);
   font-weight: var(--font-bold);
   transition: var(--transition-base);
-  min-width: var(--button-min-width);
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.8;
-  }
+  border: 1px solid transparent;
 
   &:active {
     transform: scale(99%);
+  }
+}
+
+/* Primary — purple fill, black text */
+@mixin button {
+  @include button-base;
+  background: var(--color-primary);
+  color: var(--color-black);
+  border-color: var(--color-primary);
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.85;
   }
 }
 
@@ -47,10 +44,43 @@ input[type="submit"] {
   @include button;
 }
 
-.button.button--secondary {
-  @include button;
+/* Outline — transparent bg, purple border, white text */
+.button--outline {
+  @include button-base;
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-primary);
 
-  --button-bg: rgba(255, 255, 255, 0.8);
-  --button-text: var(--color-dark);
-  --focus-color: var(--color-dark);
+  &:hover,
+  &:focus-visible {
+    background: var(--color-primary);
+    color: var(--color-black);
+  }
+}
+
+/* White — white fill, black text */
+.button--white {
+  @include button-base;
+  background: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.85;
+  }
+}
+
+/* Secondary — subtle surface, white text */
+.button--secondary {
+  @include button-base;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--stroke-subtle);
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
 }

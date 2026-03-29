@@ -8,7 +8,7 @@
 @mixin grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
-  gap: var(--gap, 1rem);
+  gap: var(--gap, var(--space-md));
 }
 
 .grid {

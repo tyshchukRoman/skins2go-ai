@@ -3,8 +3,8 @@
 
   box-shadow: var(--shadow-base);
   padding: var(--header-spacing) 0;
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-surface);
+  color: var(--color-bg);
 
   .menu {
     display: flex;
@@ -88,7 +88,7 @@
 
       max-height: 16rem;
       overflow-y: auto;
-      background-color: var(--color-secondary);
+      background-color: var(--color-surface);
 
       @media screen and ( min-width:  #{$breakpoint-lg}){
         position: absolute;

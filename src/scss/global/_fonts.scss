@@ -1,31 +1,15 @@
 @font-face {
-  font-family: 'Inter';
-  src: url('../../assets/fonts/Inter-Regular.woff2') format('woff2');
+  font-family: 'Space Grotesk';
+  src: url('../../assets/fonts/SpaceGrotesk-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gasoek One';
+  src: url('../../assets/fonts/GasoekOne-Regular.woff2') format('woff2');
   font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../../assets/fonts/Inter-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../../assets/fonts/Inter-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../../assets/fonts/Inter-Bold.woff2') format('woff2');
-  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }

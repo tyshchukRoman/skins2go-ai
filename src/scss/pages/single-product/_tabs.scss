@@ -12,16 +12,16 @@
     a {
       display: block;
       text-decoration: none;
-      border-bottom: var(--stroke-transparent);
+      border-bottom: 1px solid transparent;
       font-size: var(--size-h6);
-      color: var(--color-dark);
+      color: var(--color-bg);
       opacity: 0.8;
     }
 
     a[aria-selected="true"],
     a:hover {
       transition: var(--transition-base);
-      border-bottom: var(--stroke-base);
+      border-bottom: var(--stroke-subtle);
       opacity: 1;
     }
   }

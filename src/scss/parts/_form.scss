@@ -14,24 +14,25 @@ textarea {
 // Styles for input fields
 @mixin input {
   width: 100%;
-  padding: 1rem 0.5rem;
-  border-radius: var(--radius-xs);
-  border: 1px solid var(--color-primary);
+  padding: 1rem var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
   transition: var(--transition-base);
-  background: var(--color-white);
+  background: var(--color-input);
 
-  font-size: var(--size-5);
-  font-weight: var(--font-regular);
+  font-family: var(--font-primary);
+  font-size: var(--size-md);
+  font-weight: var(--font-medium);
   line-height: var(--leading-normal);
-  color: var(--color-black);
+  color: var(--color-text);
 
   &::placeholder {
-    color: var(--color-dark);
-    opacity: 0.8;
+    color: var(--color-text-muted);
   }
 
   &:focus {
     outline: none;
+    border-color: var(--color-primary);
   }
 }
 
@@ -53,12 +54,9 @@ select {
 }
 
 input[type="search"] {
-  width: 100%;
-  max-width: 14rem;
-  background: url(../assets/icons/search-icon.svg) no-repeat 1rem center;
+  background: var(--color-input) url(../../assets/icons/search-icon.svg) no-repeat 1rem center;
   background-size: 1rem;
   padding-left: 2.5rem;
-  height: 2.5rem;
 }
 
 textarea {
@@ -70,8 +68,8 @@ textarea {
 label {
   display: inline-block;
   line-height: var(--leading-relaxed);
-  color: var(--color-black);
-  font-weight: var(--font-regular);
+  color: var(--color-text);
+  font-weight: var(--font-medium);
   margin-bottom: 0.25rem;
 }
 

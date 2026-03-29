@@ -5,21 +5,21 @@
  */
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1rem);
+  margin-top: var(--flow-space, var(--space-md));
 }
 
 .flow-recursive * + * {
-  margin-top: var(--flow-space, 1rem);
+  margin-top: var(--flow-space, var(--space-md));
 }
 
 @mixin flow {
   & > * + * {
-    margin-top: var(--flow-space, 1rem);
+    margin-top: var(--flow-space, var(--space-md));
   }
 }
 
 @mixin flow-recursive {
   * + * {
-    margin-top: var(--flow-space, 1rem);
+    margin-top: var(--flow-space, var(--space-md));
   }
 }

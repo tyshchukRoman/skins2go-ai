@@ -1,10 +1,10 @@
 .currency-switcher {
 	--currency-switcher-width: 6rem;
 
-	--currency-switcher-border: var(--stroke-base);
-	--currency-switcher-bg: var(--color-light);
+	--currency-switcher-border: var(--stroke-subtle);
+	--currency-switcher-bg: var(--color-surface);
 
-	--currency-switcher-color: var(--color-dark);
+	--currency-switcher-color: var(--color-bg);
 	--currency-switcher-font-size: var(--font-medium);
 	--currency-switcher-font-weight: var(--font-bold);
 	--currency-switcher-font-family: var(--font-primary);
