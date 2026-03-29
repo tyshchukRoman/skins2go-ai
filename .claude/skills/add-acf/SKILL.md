@@ -1,4 +1,17 @@
-Create an ACF field group for a post type or page template. The target is: $ARGUMENTS
+---
+name: add-acf
+description: Create an ACF field group for a post type or page template in this theme. Use when the user asks to add ACF fields, register a field group, or set up admin fields for a CPT or page template.
+---
+
+# Add ACF Field Group
+
+## When To Use
+
+Use this skill when the task is to create a new ACF field group scoped to:
+- a custom post type (`inc/acf/post-types/`)
+- a page template (`inc/acf/templates/`)
+
+The target is: $ARGUMENTS
 
 ## Steps
 
@@ -39,7 +52,8 @@ Create an ACF field group for a post type or page template. The target is: $ARGU
 
    The file is auto-loaded via `glob()` in `inc/acf.php` — no manual require needed.
 
-## ACF field type reference
+## ACF Field Type Reference
+
 - `text` — single-line text
 - `textarea` — multi-line text (add `'rows' => 3`)
 - `wysiwyg` — rich text editor (add `'media_upload' => 0` to disable media upload)
@@ -50,6 +64,7 @@ Create an ACF field group for a post type or page template. The target is: $ARGU
 - `flexible_content` — layout picker (add `'button_label'`, `'layouts' => [...]`)
 
 ## Notes
+
 - Do NOT add `key` properties — ACFComposer generates unique keys from the field hierarchy
 - Each key/value pair on its own line
 - If reusing fields from a block in `inc/acf/blocks/`, call `codelibry_acf_fields_{block_name}()` in `sub_fields`

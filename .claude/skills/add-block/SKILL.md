@@ -1,9 +1,9 @@
 ---
-name: acf-block-from-image-figma
+name: add-block
 description: Creates ACF Flexible Content blocks from an image or a Figma frame/node URL for this theme. Use when the user asks to create a new section/block, convert a design to code, or replicate a Figma frame while preserving the project's PHP/ACF/SCSS conventions.
 ---
 
-# ACF Block From Image/Figma
+# Add Block
 
 ## When To Use
 

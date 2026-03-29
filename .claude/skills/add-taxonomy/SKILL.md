@@ -1,10 +1,21 @@
-Create a new custom taxonomy for the theme. The taxonomy details are: $ARGUMENTS
+---
+name: add-taxonomy
+description: Create a new custom taxonomy for this WordPress theme. Use when the user asks to add a taxonomy, register categories/tags for a CPT, or create a new classification system.
+---
+
+# Add Custom Taxonomy
+
+## When To Use
+
+Use this skill when the task is to register a new custom taxonomy in `inc/taxonomies/`.
+
+The taxonomy details are: $ARGUMENTS
 
 ## Steps
 
 1. **Create the taxonomy registration file** at `inc/taxonomies/{taxonomy-slug}.php`
 
-   Use this pattern (replace "Example Category" / "example" with the actual taxonomy name and slug):
+   Use this pattern (replace `{PluralName}` / `{SingularName}` / `{taxonomy-slug}` / `{post-type-slug}` with actual values):
 
    ```php
    <?php
@@ -51,6 +62,7 @@ Create a new custom taxonomy for the theme. The taxonomy details are: $ARGUMENTS
    The file is auto-loaded via `glob()` in `inc/taxonomies.php` — no manual require needed.
 
 ## Notes
+
 - Set `'hierarchical' => true` for category-like (parent/child) taxonomies
 - Set `'hierarchical' => false` for tag-like taxonomies
 - The second argument to `register_taxonomy()` is an array of post type slugs the taxonomy applies to

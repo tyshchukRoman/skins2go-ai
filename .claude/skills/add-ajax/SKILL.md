@@ -1,4 +1,15 @@
-Create a new AJAX handler for the theme. The action name is: $ARGUMENTS
+---
+name: add-ajax
+description: Create a new WordPress AJAX handler for this theme. Use when the user asks to add an AJAX action, endpoint, or server-side handler callable from JavaScript.
+---
+
+# Add AJAX Handler
+
+## When To Use
+
+Use this skill when the task is to create a new AJAX handler in `inc/ajax/`.
+
+The action name is: $ARGUMENTS
 
 ## Steps
 
@@ -52,6 +63,7 @@ Create a new AJAX handler for the theme. The action name is: $ARGUMENTS
    ```
 
 ## Notes
+
 - Remove the `wp_ajax_nopriv_` hook if the action should only be available to logged-in users
 - Always sanitize input (`sanitize_text_field`, `absint`, `wp_kses_post`, etc.)
 - Always verify nonce for mutating actions

@@ -1,10 +1,21 @@
-Create a new Custom Post Type for the theme. The CPT name is: $ARGUMENTS
+---
+name: add-cpt
+description: Create a new Custom Post Type for this WordPress theme. Use when the user asks to register a CPT, add a new post type, or scaffold a new content type.
+---
+
+# Add Custom Post Type
+
+## When To Use
+
+Use this skill when the task is to register a new Custom Post Type in `inc/post-types/`.
+
+The CPT name is: $ARGUMENTS
 
 ## Steps
 
 1. **Create the CPT registration file** at `inc/post-types/{cpt-slug}.php`
 
-   Use this pattern (replace all occurrences of "Example" / "example" with the actual CPT name):
+   Use this pattern (replace all occurrences of `{PluralName}` / `{SingularName}` / `{cpt-slug}` with the actual CPT name):
 
    ```php
    <?php
@@ -67,7 +78,8 @@ Create a new Custom Post Type for the theme. The CPT name is: $ARGUMENTS
 
    The file is auto-loaded via `glob()` in `inc/post-types.php` — no manual require needed.
 
-## Naming conventions
+## Naming Conventions
+
 - File name: kebab-case slug, e.g. `team-members.php`
 - CPT slug: kebab-case, e.g. `team-members`
 - Adjust `supports`, `has_archive`, `public`, `hierarchical` as appropriate for the CPT's purpose
