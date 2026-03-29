@@ -1,32 +1,28 @@
 <header class="header">
   <div class="header__inner | container-lg">
 
-    <!-- Mobile Menu -->
-    <?php get_template_part('template-parts/header/mobile-menu') ?>
-
     <!-- Logo -->
     <?php get_template_part('template-parts/header/logo') ?>
 
-    <!-- Menu -->
-    <?php get_template_part('template-parts/header/menu') ?>
+    <!-- Right side -->
+    <div class="header__actions | cluster">
 
-    <!-- Woocommerce Links -->
-    <div class="header__woo-links | cluster">
+      <!-- Desktop nav -->
+      <?php get_template_part('template-parts/header/menu') ?>
 
-      <!-- Currency Switcher -->
-      <?php get_template_part('template-parts/header/currency-switcher') ?>
+      <!-- Woo icons (currency, search, wishlist, cart) -->
+      <div class="header__woo-links | cluster">
+        <?php get_template_part('template-parts/header/currency-switcher') ?>
+        <?php get_template_part('template-parts/header/search') ?>
+        <?php get_template_part('template-parts/header/wishlist') ?>
+        <?php get_template_part('template-parts/header/cart') ?>
+      </div>
 
-      <!-- Search -->
-      <?php get_template_part('template-parts/header/search') ?>
-
-      <!-- My Account -->
+      <!-- Auth buttons -->
       <?php get_template_part('template-parts/header/login') ?>
 
-      <!-- Wishlist -->
-      <?php get_template_part('template-parts/header/wishlist') ?>
-
-      <!-- Cart -->
-      <?php get_template_part('template-parts/header/cart') ?>
+      <!-- Mobile menu toggle -->
+      <?php get_template_part('template-parts/header/mobile-menu') ?>
 
     </div>
 

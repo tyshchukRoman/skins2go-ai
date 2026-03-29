@@ -1,0 +1,78 @@
+.hero {
+  padding-top: calc(var(--space-4xl) + 6rem); // clear transparent header
+  padding-bottom: var(--space-4xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  // Decorative gradient accent — top-left
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse at top left, rgba(191, 0, 255, 0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  // Decorative gradient accent — top-right
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse at top right, rgba(143, 140, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 45rem;
+    margin-inline: auto;
+  }
+
+  &__badge-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-orange);
+    border: 1px solid #f75e0b;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: var(--size-sm);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+  }
+
+  &__title {
+    font-size: var(--size-display);
+    margin: 0;
+  }
+
+  &__desc {
+    font-size: var(--size-lg);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+
+  @include md {
+    padding-top: calc(var(--space-3xl) + 5rem);
+
+    &__title {
+      font-size: clamp(2rem, 8vw, var(--size-display));
+    }
+  }
+}

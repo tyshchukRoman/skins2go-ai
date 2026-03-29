@@ -14,6 +14,12 @@ add_action('acf/init', function () {
                 'button_label' => 'Add Block',
                 'layouts'      => [
                     [
+                        'name'       => 'hero',
+                        'label'      => 'Hero',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_hero(),
+                    ],
+                    [
                         'name'       => 'image-text',
                         'label'      => 'Image & Text',
                         'display'    => 'block',
@@ -24,6 +30,12 @@ add_action('acf/init', function () {
                         'label'      => 'Testimonials',
                         'display'    => 'block',
                         'sub_fields' => codelibry_acf_fields_testimonials(),
+                    ],
+                    [
+                        'name'       => 'stats-banner',
+                        'label'      => 'Stats Banner',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_stats_banner(),
                     ],
                 ],
             ],
