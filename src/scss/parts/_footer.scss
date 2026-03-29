@@ -1,51 +1,109 @@
 .footer {
   background-color: var(--color-bg);
   color: var(--color-surface);
-  padding: 2.5rem 0;
+  padding: 5rem 0;
 
-  &__inner {
-    --flow-space: 2rem;
-  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 4rem;
+    align-items: start;
 
-  &__main {
-    gap: 2rem;
-  }
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+    }
 
-  &__logo {
-    height: clamp(2rem, 3.3vw, 3rem);
-    display: block;
-
-    img, svg {
-      height: 100%;
-      width: fit-content;
+    @include md {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
     }
   }
 
   &__info {
-    max-width: 15rem;
+    --flow-space: 1.25rem;
+    max-width: 22rem;
   }
 
-  &__menu-wrapper {
+  &__logo {
+    display: block;
+
+    img, svg {
+      height: clamp(1.75rem, 3vw, 2.5rem);
+      width: auto;
+    }
+  }
+
+  &__description {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-surface);
+  }
+
+  &__copyright {
+    font-size: 0.75rem;
+    color: var(--color-muted, rgba(255, 255, 255, 0.4));
+  }
+
+  &__menus {
+    display: flex;
+    gap: 4rem;
     align-items: flex-start;
-    column-gap: 4rem;
-    row-gap: 2rem;
-  }
 
-  .menu {
-    a[aria-current="page"] {
-      color: var(--color-primary);
+    @include lg {
+      grid-column: 1 / -1;
+      order: 3;
+    }
+
+    @include md {
+      order: unset;
+    }
+
+    @include sm {
+      gap: 2rem;
     }
   }
 
   &__column {
-    --flow-space: 0.75rem;
+    --flow-space: 0.875rem;
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+
+    a {
+      color: var(--color-surface);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &[aria-current="page"] {
+        color: var(--color-primary);
+      }
+    }
   }
 
   &__payments {
-    height: 2.5rem;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-end;
+
     img {
-      height: 100%;
+      max-width: 6rem;
+      height: auto;
+    }
+
+    @include lg {
+      align-items: flex-start;
     }
   }
 

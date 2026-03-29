@@ -1,7 +1,7 @@
 <?php
 
 // ACF Options
-$footer_description = get('footer__description', $options = true);
+$footer_description  = get('footer__description', $options = true);
 $footer_company_name = get('footer__company-name', $options = true);
 $footer_payment_methods = get('footer__payment_methods', $options = true);
 
@@ -23,61 +23,51 @@ $menus = array_map(function($menu_id, $location) {
 			'echo' => false,
 		])
 	];
-}, $locations, array_keys($locations), array_values($locations));
+}, $locations, array_keys($locations));
 
 ?>
 
 <footer class="footer" id="footer">
 	<div class="container">
-    <div class="footer__inner | flow">
-      <div class="footer__main | repel">
-        <div class="footer__info | flow">
-          <a href="<?php echo home_url() ?>" class="footer__logo">
-            <?php echo get_inline_svg('logo') ?>
-            <span class="visually-hidden"><?php esc_html_e('Go to homepage', 'codelibry') ?></span>
-          </a>
+		<div class="footer__grid">
 
-          <?php if($footer_description): ?>
-            <div class="footer__description | flow">
-              <?php echo wpautop($footer_description) ?>
-            </div>
-          <?php endif; ?>
-        </div>
+			<div class="footer__info | flow">
+				<a href="<?php echo home_url() ?>" class="footer__logo">
+					<img src="<?php echo get_image_src('logo.png') ?>" alt="<?php bloginfo('name') ?>" width="109" height="42">
+					<span class="visually-hidden"><?php esc_html_e('Go to homepage', 'codelibry') ?></span>
+				</a>
 
-        <div class="footer__menu-wrapper | cluster">
-          <?php foreach ($menus as $menu): ?>
-            <div class="footer__column | flow">
-              <h4 class="h5">
-                <?php echo $menu['title'] ?>
-              </h4>
-              <?php echo $menu['menu'] ?>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
+				<?php if ($footer_description): ?>
+					<p class="footer__description"><?php echo esc_html($footer_description) ?></p>
+				<?php endif; ?>
 
-      <div class="footer__bottom | repel">
-        <p class="footer__copyright">
-          <?php echo date('Y') ?> © <?php echo $footer_company_name ?>
-        </p>
+				<p class="footer__copyright">
+					&copy; Copyright <?php echo date('Y') ?><?php if ($footer_company_name): ?> - <?php echo esc_html($footer_company_name) ?><?php endif; ?>
+				</p>
+			</div>
 
-        <div class="cluster">
-          <?php if(shortcode_exists('woocs')): ?>
-            <div class="currency-switcher | footer__currency-switcher">
-              <?php echo do_shortcode('[woocs sd=1]'); ?>
-            </div>
-          <?php endif; ?>
-          
-          <div class="footer__payments">
-            <?php if($footer_payment_methods): ?>
-              <?php echo wp_get_attachment_image($footer_payment_methods, 'thumbnail', false, [
-                'loading' => 'lazy'
-              ]) ?>
-            <?php else: ?>
-              <img src="<?php echo get_image_src('payment-methods.png') ?>" alt="visa and mastercard payment methods" />
-            <?php endif; ?>
-          </div>
-        </div>
-    </div>
+			<nav class="footer__menus">
+				<?php foreach ($menus as $menu): ?>
+					<div class="footer__column | flow">
+						<?php echo $menu['menu'] ?>
+					</div>
+				<?php endforeach; ?>
+			</nav>
+
+			<div class="footer__payments">
+				<?php if ($footer_payment_methods): ?>
+					<?php echo wp_get_attachment_image($footer_payment_methods, 'full', false, ['loading' => 'lazy']) ?>
+				<?php else: ?>
+					<img src="<?php echo get_image_src('payment-methods.png') ?>" alt="Payment methods" loading="lazy">
+				<?php endif; ?>
+
+				<?php if (shortcode_exists('woocs')): ?>
+					<div class="footer__currency-switcher">
+						<?php echo do_shortcode('[woocs sd=1]') ?>
+					</div>
+				<?php endif; ?>
+			</div>
+
+		</div>
 	</div>
 </footer>
